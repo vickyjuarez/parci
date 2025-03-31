@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Áreas</title>
+    <link rel="stylesheet" href="boostrap/bootstrap.min.css">
+    <link rel="stylesheet" href="htts://cdn.jdelivr.net/npm/boostrap-icon@1.11.3/font/boostrap-icons.min.css">
+    <style>
+        /* Diseño con flexbox para dividir la pantalla */
+        .layout-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        .inputs-container {
+            width: 45%;
+        }
+        .result-container {
+            width: 45%;
+            text-align: right;
+        }
+        .img-geometry {
+            max-width: 150px;
+        }
+        .alert {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/cecy.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            areaS
+          </a>
+        </div>
+      </nav>
+    <div class="container mt-5">
+        <!-- Botones para cambiar entre interfaces -->
+        <button class="btn btn-danger" id="btncu">CUADRADO</button>
+        <button class="btn btn-danger" id="btnre">RECTÁNGULO</button>
+        <button class="btn btn-danger" id="btntri">TRIÁNGULO</button>
+        <button class="btn btn-danger" id="btnci">CÍRCULO</button>
+<button class="btn btn-danger" id="btntra">TRAPECIO</button>
+<button class="btn btn-danger" id="btnhex">HEXÁGONO</button>
+        <!-- Interfaz Cuadrado -->
+        <div id="squareInterface" class="layout-container">
+            <div class="inputs-container">
+                <h3>Área de un Cuadrado</h3>
+                <label for="rangeSquare">Lado:</label>
+                <input type="range" id="rangeSquare" max="100" value="0" min="0" class="form-control">
+                <h1 id="valueSquare"> 0</h1>
+            </div>
+            <div class="result-container">
+                <h1 id="resultSquare" class="alert alert-primary">Área: 0</h1>
+                <img id="imgSquare" src="img/cuadrado.jpg" alt="Cuadrado" class="img-geometry">
+            </div>
+        </div>
+
+        <!-- Interfaz Rectángulo -->
+        <div id="rectangleInterface" class="layout-container" style="display: none;">
+            <div class="inputs-container">
+                <h3>Área de un Rectángulo</h3>
+                <label for="rangeBase">Base:</label>
+                <input type="range" id="rangeBase" max="100" value="0" min="0" class="form-control">
+                <h1 id="valueBase"> 0</h1>
+                <label for="rangeHeight">Altura:</label>
+                <input type="range" id="rangeHeight" max="100" value="0" min="0" class="form-control">
+                <h1 id="valueHeight"> 0</h1>
+            </div>
+            <div class="result-container">
+                <h1 id="resultRectangle" class="alert alert-primary">Área: 0</h1>
+                <img id="imgRectangle" src="img/rectangulo.png" alt="Rectángulo" class="img-geometry">
+            </div>
+        </div>
+
+        <!-- Interfaz Triángulo -->
+        <div id="triangleInterface" class="layout-container" style="display: none;">
+            <div class="inputs-container">
+                <h3>Área de un Triángulo</h3>
+                <label for="rangeBaseTriangle">Base:</label>
+                <input type="range" id="rangeBaseTriangle" max="100" value="0" min="0" class="form-control">
+                <h1 id="valueBaseTriangle"> 0</h1>
+                <label for="rangeHeightTriangle">Altura:</label>
+                <input type="range" id="rangeHeightTriangle" max="100" value="0" min="0" class="form-control">
+                <h1 id="valueHeightTriangle"> 0</h1>
+            </div>
+            <div class="result-container">
+                <h1 id="resultTriangle" class="alert alert-primary">Área: 0</h1>
+                <img id="imgTriangle" src="img/triangulo.png" alt="Triángulo" class="img-geometry">
+            </div>
+        </div>
+
+        <!-- Interfaz Círculo -->
+        <div id="circleInterface" class="layout-container" style="display: none;">
+            <div class="inputs-container">
+                <h3>Área de un Círculo</h3>
+                <label for="rangeRadius">Radio:</label>
+                <input type="range" id="rangeRadius" max="100" value="0" min="0" class="form-control">
+                <h1 id="valueRadius"> 0</h1>
+            </div>
+            <div class="result-container">
+                <h1 id="resultCircle" class="alert alert-primary">Área: 0</h1>
+                <img id="imgCircle" src="img/circulo.png" alt="Círculo" class="img-geometry">
+            </div>
+        </div>
+        <!-- Interfaz Trapecio -->
+<div id="trapezoidInterface" class="layout-container" style="display: none;">
+    <div class="inputs-container">
+        <h3>Área de un Trapecio</h3>
+        <label for="rangeBaseMajor">Base Mayor:</label>
+        <input type="range" id="rangeBaseMajor" max="100" value="0" min="0" class="form-control">
+        <h1 id="valueBaseMajor"> 0</h1>
+        <label for="rangeBaseMinor">Base Menor:</label>
+        <input type="range" id="rangeBaseMinor" max="100" value="0" min="0" class="form-control">
+        <h1 id="valueBaseMinor"> 0</h1>
+        <label for="rangeHeightTrapezoid">Altura:</label>
+        <input type="range" id="rangeHeightTrapezoid" max="100" value="0" min="0" class="form-control">
+        <h1 id="valueHeightTrapezoid"> 0</h1>
+    </div>
+    <div class="result-container">
+        <h1 id="resultTrapezoid" class="alert alert-primary">Área: 0</h1>
+        <img id="imgTrapezoid" src="img/trapez.jpg" alt="Trapecio" class="img-geometry">
+    </div>
+</div>
+
+<!-- Interfaz Hexágono -->
+<div id="hexagonInterface" class="layout-container" style="display: none;">
+    <div class="inputs-container">
+        <h3>Área de un Hexágono</h3>
+        <label for="rangeSideHexagon">Lado:</label>
+        <input type="range" id="rangeSideHexagon" max="100" value="0" min="0" class="form-control">
+        <h1 id="valueSideHexagon">0</h1>
+    </div>
+    <div class="result-container">
+        <h1 id="resultHexagon" class="alert alert-primary">Área: 0</h1>
+        <img id="imgHexagon" src="img/hexag.jpg" alt="Hexágono" class="img-geometry">
+    </div>
+</div>
+    </div>
+    <script src="js/bootstrap.bundle.js"></script>
+
+    <script src="js/07.js"></script>
+</body>
+</html>
