@@ -1,0 +1,140 @@
+body {
+    background-color: #FFCC99;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.pagar-btn {
+    background-color: #ce6712; 
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.pagar-btn:hover {
+    transform: scale(1.05); /* Efecto de agrandamiento */
+    background-color: #7c3207; 
+}
+ 
+  /* Personalización del slider: cambio de color de su "bolita" */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #FFCC99; 
+    cursor: pointer;
+    border: none;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #FF4500;
+    cursor: pointer;
+    border: none;
+  }
+  
+  input[type="range"]::-ms-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #FF4500;
+    cursor: pointer;
+    border: none;
+  }
+  
+   /* radio buttons */
+  
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff; /* Fondo inicial */
+    margin: 0 5px;
+    font: inherit;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FF4500;   
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    vertical-align: middle;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Cuando estén seleccionados */
+  input[type="radio"]:checked::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #FF4500;  /* Color de la bolita al estar seleccionado */
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+  
+  /*  cuando se hace hover */
+  input[type="radio"]:hover {
+    background-color: #FFF5E6;  /* cambio de fondo al pasar el cursor */
+  }
+  
+  
+  /* 
+     Personalización de checkboxes
+   */
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;  /* Fondo inicial */
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FF4500;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    vertical-align: middle;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Cuando estén seleccionados */
+  input[type="checkbox"]:checked::before {
+    content: "\2713";  /* Carácter de check (✓) */
+    font-size: 16px;
+    color: #FF4500;
+    position: absolute;
+    top: -4px;
+    left: 2px;
+  }
+  
+  /*  hover para checkbox */
+  input[type="checkbox"]:hover {
+    background-color: #FFF5E6;  /* Suave cambio de color al pasar el cursor */
+  }
+  /* ===============================
+   Cambiar el sombreado azul a naranja en elementos enfocados
+   =============================== */
+
+/* Para botones primarios (btn-primary) cuando tienen el foco */
+.btn-primary:focus, 
+.btn-primary.focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.5) !important;
+}
+
+/* Para elementos de formulario (form-control) en foco */
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 165, 0, 0.5) !important;
+  border-color: #FFA500 !important; /* Cambia el borde al color naranja */
+}
+
+/* (Opcional) Si utilizas otros elementos que presenten sombra azul en focus, agrega reglas similares */

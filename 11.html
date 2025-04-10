@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IMC</title>
+  <link rel="stylesheet" href="00.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de IMC</h1>
+    <label for="height">Altura (cm):</label>
+    <input id="height" type="range" min="50" max="220" value="170" oninput="updateHeight(this.value)">
+    <span id="height-value">170</span> cm
+
+    <label for="weight">Peso (kg):</label>
+    <input id="weight" type="range" min="10" max="150" value="70" oninput="updateWeight(this.value)">
+    <span id="weight-value">70</span> kg
+
+    <!-- Aquí es donde se mostrará el GIF o el resultado -->
+    <p id="bmi-result"></p>
+  </div>
+  <script src="10.js"></script>
+</body>
+</html>

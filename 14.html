@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DINO PIZZ</title>
+  <link rel="stylesheet" href="boostrap/bootstrap.min.css">
+  <link rel="stylesheet" href="01.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bg-naranja-claro" id="body">
+  <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container-fluid">
+
+
+      
+      <a class="navbar-brand m-auto" href="index.html">
+        <img src="img/cecy.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top m-auto">
+        DINO PIZZ
+      </a>
+    </div>
+  </nav>
+  <div class="container-fluid shadow p-3 mb-5 bg-body-tertiary rounded mt-3 w-75 m-auto text-center">
+    <div class="row m-3 justify-content-center align-items-center">
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <img src="img/dino.jpg" alt="Di" width="80%" height="80%" class="card shadow m-auto">
+      </div>
+      <div class="col-md-6">
+        <h1>ORDEN</h1>
+        <table class="w-100">
+          <tr>
+            <td class="text-start">
+              <h4>CANTIDAD</h4>
+            </td>
+            <td>
+              <input type="range" min="1" max="10" value="1" class="form-control" id="cant">
+            </td>
+            <td>
+              <h2 class="px-5" id="vca">1</h2>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-start">
+              <h4>TAMAÑO</h4>
+            </td>
+            <td class="text-start">
+              <p><input type="radio" name="tamanio" id="jumbo" class="form-check-inline" checked> <span class="h3">JUMBO</span></p>
+              <p><input type="radio" name="tamanio" id="familiar" class="form-check-inline"> <span class="h3">FAMILIAR</span></p>
+              <p><input type="radio" name="tamanio" id="grande" class="form-check-inline"> <span class="h3">GRANDE</span></p>
+              <p><input type="radio" name="tamanio" id="individual" class="form-check-inline"> <span class="h3">INDIVIDUAL</span></p>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="text-start">
+              <h4>ESPECIALIDAD</h4>
+            </td>
+            <td>
+              <select name="" id="especial" class="form-control">
+                <option value="1">1 INGREDIENTE</option>
+                <option value="2">2 INGREDIENTES</option>
+                <option value="3">3 INGREDIENTES</option>
+                <option value="4">4 INGREDIENTES</option>
+              </select>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="text-start">
+              <h4>COMPLEMENTOS</h4>
+            </td>
+            <td class="text-start">
+              <p><input type="checkbox" id="alit" class="form-check-inline"> <span class="h3">ALITAS</span></p>
+              <p><input type="checkbox" id="soda" class="form-check-inline"> <span class="h3">REFRESCO 2L</span></p>
+              <p><input type="checkbox" id="nuggets" class="form-check-inline"> <span class="h3">NUGGETS</span></p>
+            </td>
+            <td>
+              <button class="btn btn-primary p-3 pagar-btn" id="btnPagar">
+                <span class="h2">PAGAR</span>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <h1 style="font-size: 60px; font-weight: bold;" id="total" class="card shadow m-auto p-4">
+                TOTAL $ 0.00 MXN
+              </h1>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/13.js"></script>
+</body>
+</html>
